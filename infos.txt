@@ -1,0 +1,8 @@
+Inscription/connection :
+
+// L'utilisateur s'inscrit sur le forum
+// Ses données sont envoyées vers la base de données
+// Il est redirigé vers la page d'accueil
+
+// Il pose une question qui est envoyée vers la bdd
+//
