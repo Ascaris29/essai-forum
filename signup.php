@@ -1,7 +1,7 @@
 <?php require('actions/users/signupAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include ('includes/head.php'); ?>
+<?php require ('includes/head.php'); ?>
 <body>
     <br><br>
     <form class="container" method="POST">
