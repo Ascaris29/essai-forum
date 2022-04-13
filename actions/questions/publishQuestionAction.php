@@ -2,8 +2,10 @@
 
 require('actions/database.php');
 
+//Valider le formulaire 
 if(isset($_POST['validate'])){
 
+    //Vérifier si les champs ne sont pas vides 
     if(!empty($_POST['title']) AND !empty($_POST['description']) AND !empty($_POST['content'])){
 
         //Récuperer les data question

@@ -1,21 +1,26 @@
 <?php
 
-require ('actions/database.php'); 
+require('actions/database.php');
 
-if(isset($_GET['id']) AND !empty($_GET['id'])){
+// Validation du formulaire
+if(isset($_POST['validate'])){
 
-    $idOfQuestion = $_GET['id'];
-    $checkIfQuestionExists = $bdd->prepare('SELECT id, id_author FROM questions WHERE id = ?');            // recuperer la question de l'id qui est tapé dans la bdd
-    $checkIfQuestionExists->execute(array($idOfQuestion));
+    // Vérifier si les champs sont remplis
+    if (!empty($_POST['title']) AND !empty($_POST['description']) AND !empty($_POST['content'])){
 
-    if($checkIfQuestionExists->rowCount() > 0){
-                                                                                                // si une question a bien été récupérée dans la bdd , alors 
-        $questionInfos = $checkIfQuestionExists->fetch();
+        $new_question_title = htmlspecialchars($_POST['title']);
+        $new_question_description = nl2br(htmlspecialchars($_POST['description']));
+        $new_question_content = nl2br(htmlspecialchars($_POST['content']));
+
+        // requete afin de modifier les datas dans la bdd
+        $editQuestionOnWebsite = $bdd->prepare('UPDATE questions SET title = ?, description = ?, content = ? WHERE id = ?');
+        $editQuestionOnWebsite->execute(array($new_question_title, $new_question_description, $new_question_content, $idOfQuestion));
+
+        // Ensuite rediriger vers la page d'affichage des questions
+        header('Location: my-questions.php');
 
     }else{
-        $errorMsg = "Aucune question n'a été trouvée";
+        $errorMsg = "Veuillez compléter tous les champs !";
     }
 
-}else{
-    $errorMsg = "Aucune question n'a été trouvée ! ";
 }
