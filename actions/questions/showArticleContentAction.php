@@ -26,7 +26,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
 
 
     }else{
-        echo "Aucune question n'a été trouvée ";
+        $errorMsg = "Aucune question n'a été trouvée ";
     }
     
 

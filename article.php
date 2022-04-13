@@ -1,5 +1,6 @@
 <?php 
-require('actions/questions/ShowArticleContentAction.php');
+    session_start();
+    require('actions/questions/ShowArticleContentAction.php');
 ?>
 
 
@@ -14,16 +15,31 @@ require('actions/questions/ShowArticleContentAction.php');
     <div class="container">
 
 
-    <?php          
+    <?php  
+    
+        // si il y'a une errormsg , afficher errorMsg
+        if(isset($_errorMsg)){
+            echo $errorMsg;
+
+        }
+
+        //
         if(isset($question_date_publication)){
         ?>
+        <h3><?= $question_title; ?></h3>
+        <hr>
+        <p><?= $question_content; ?></p>
+        <hr>
+        <small><?= $question_pseudo_author . ' ' . $question_date_publication; ?></small>
 
 
        <?php 
     }
 
     ?>
-    <?= $question_title ?>
+
+
+    
 
     </div>
 

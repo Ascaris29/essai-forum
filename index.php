@@ -36,6 +36,7 @@ require('actions/questions/showAllQuestionAction.php');
 
           <div class="card">
              <div class="card-header">
+                <a href="article.php?id=<?php echo $question['id']; ?>"> 
                 <?= $question['title']; ?>
              </div>
              <div class="card-body">
