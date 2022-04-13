@@ -1,4 +1,5 @@
-pour modifier :
-git commit -m "blabla"
+pour ajouter des modifications avec git :
+
 git add .
+git commit -m "blabla"
 git push origin main
