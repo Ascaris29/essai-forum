@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    require('actions/questions/ShowArticleContentAction.php');
+    require('actions/questions/showArticleContentAction.php');
+    require('actions/questions/postAnswerAction.php');
 ?>
 
 

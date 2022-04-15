@@ -1,4 +1,5 @@
 <?php
+
 require('actions/database.php');
 
 
@@ -9,7 +10,7 @@ if(isset($_POST['validate'])){
 
         $user_answer = nl2br(htmlspecialchars($_POST['answer']));
         
-        $insertAnswer = $bdd->prepare('INSERT INTO answers(id_author, pseudo_author, id_question, content) VALUES (?, ?, ?, ?)');
+        $insertAnswer = $bdd->prepare('INSERT INTO answers(id_author, pseudo_author, id_question, content, date_answer) VALUES (?, ?, ?, ?, ?)');
         $insertAnswer->execute(array($_SESSION['id'], $_SESSION['pseudo'], $idOfTheQuestion, $user_answer));
 
 
