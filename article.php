@@ -26,18 +26,32 @@
         //
         if(isset($question_date_publication)){
         ?>
-        <h3><?= $question_title; ?></h3>
-        <hr>
-        <p><?= $question_content; ?></p>
-        <hr>
-        <small><?= $question_pseudo_author . ' ' . $question_date_publication; ?></small>
+        <section class="show-content">
+            <h3><?= $question_title; ?></h3>
+            <hr>
+            <p><?= $question_content; ?></p>
+            <hr>
+            <small><?= $question_pseudo_author . ' ' . $question_date_publication; ?></small>
+        </section>
+        <br>
+        <section class="show_answers">
 
+            <form class="form-group" method="POST">
+                <div class="mb-3">
+                    <label for="anwser" class="form-label">Réponse :</label>
+                    <textarea name="answer" class="form-control"></textarea>
+                    <br>
+                    <button class="btn btn-primary" type="submit" name="validate">Répondre </button>
+                </div>
+              
+            </form>
 
+        </section>
        <?php 
     }
 
     ?>
-
+    <br>
 
     
 
