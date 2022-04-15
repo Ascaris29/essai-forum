@@ -3,3 +3,4 @@ pour faire des commits avec git :
 git add .
 git commit -m "blabla"
 git push origin main
+si problème de branche ex: Your branch is up to date with 'origin/main'" = git fetch (cela se met à jour) ou git pull si ca ne fonctionne pas ;

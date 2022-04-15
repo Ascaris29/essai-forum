@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 require ('actions/database.php'); 
 
 //vérifier si l'iD de la question est bien passé en paramètres dans l'url

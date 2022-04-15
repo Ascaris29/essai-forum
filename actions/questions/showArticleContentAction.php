@@ -1,36 +1,33 @@
 <?php
 
-require('actions/database.php'); 
+require('actions/database.php');
 
-// Vérifier si l'id est rentrée dans l'url
+//Vérifier si l'id de la question est rentrée dans l'URL 
 if(isset($_GET['id']) AND !empty($_GET['id'])){
 
-    // Récupérer l'id de la question
+    //Récupérer l'identifiant de la question
     $idOfTheQuestion = $_GET['id'];
 
-    // Vérifier si la question existe
+    //Vérifier si la question existe
     $checkIfQuestionExists = $bdd->prepare('SELECT * FROM questions WHERE id = ?');
     $checkIfQuestionExists->execute(array($idOfTheQuestion));
 
     if($checkIfQuestionExists->rowCount() > 0){
 
-        // Récuperer toutes les datas de la question
+        //Récupérer toutes les datas de la questions
         $questionsInfos = $checkIfQuestionExists->fetch();
 
-        //Stocker les datas de la quesition dans des variables propres
+        //Stocker les datas de la question dans des variables propres.
         $question_title = $questionsInfos['title'];
         $question_content = $questionsInfos['content'];
         $question_id_author = $questionsInfos['id_author'];
         $question_pseudo_author = $questionsInfos['pseudo_author'];
-        $question_date_publication = $questionsInfos['date_publication'];        
-
-
+        $question_publication_date = $questionsInfos['date_publication'];
+        
     }else{
-        $errorMsg = "Aucune question n'a été trouvée ";
+        $errorMsg = "Aucune question n'a été trouvée";
     }
-    
 
 }else{
-
-    echo "Aucune question n'a été trouvée";
+    $errorMsg = "Aucune question n'a été trouvée";
 }

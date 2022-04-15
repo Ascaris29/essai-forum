@@ -25,7 +25,7 @@
         }
 
         //
-        if(isset($question_date_publication)){
+        if(isset($question_publication_date)){
         ?>
         <section class="show-content">
             <h3><?= $question_title; ?></h3>
