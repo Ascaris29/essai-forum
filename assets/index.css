@@ -7,15 +7,27 @@ body
     box-sizing: border-box;
     margin:0;
     padding:0;   
-    font-family: 'Roboto'; 
+    font-family: "roboto" ; 
     height:100vw; 
 }
 
 .container{
     display:flex;
     flex-direction:column;
-    text-align:center;
-       
+    text-align:center;      
+}
+
+.form-search button{
+    border:none;
+    background-color:#4D1977;
+    margin:15px 0;
+}
+.form-search button:hover{
+    background-color:#8E05FD;
+}
+input[type=search]{
+    width:50vw;
+    margin:15px;
 }
 .card{
     margin:10px;
@@ -23,12 +35,15 @@ body
 .card-header{
     background-color:#4D1977;
 }
+.card-footer{
+    background-color:rgba(100,71,123,0.2);
+}
 .titre, .pseudo{
     margin:5px;
 }
 .titre a{
     color:#fff;
-    text-decoration:none;
+    
 }
 
 .pseudo a{

@@ -27,7 +27,7 @@ require('actions/questions/showAllQuestionAction.php');
 
    <div class="container">
 
-      <form method="GET">
+      <form method="GET" class="form-search">
          <div class="form-group row">
 
 
@@ -54,7 +54,7 @@ require('actions/questions/showAllQuestionAction.php');
                 <?= $question['title']; ?></a></p>
              </div>
              <div class="card-body">
-             <?= $question['description']; ?>
+             <?= $question['content']; ?>
              </div>
              <div class="card-footer">
                <p class="pseudo">Publié par <a href="profil.php?id=<?= $question['id_author']; ?>"> <?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?></p>

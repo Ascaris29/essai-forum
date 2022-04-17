@@ -51,7 +51,7 @@ require('actions/users/showUsersProfilAction.php');
             ?>  
             <div class="card">
                 <div class="card-header">
-                    <?php echo $question['title']; ?>
+                    <a href="profil.php?id=<?php echo $question['id']; ?>"><?php echo $question['title']; ?></a>
                 </div>
                 <div class="card-body">
                     <?php echo $question['content']; ?>

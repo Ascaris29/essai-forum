@@ -13,9 +13,7 @@
     <!--code css bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="assets/style.css">
-    
-    
+    <link rel="stylesheet" href="assets/publish-question.css">
     <!--code javascript bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- javascript -->
@@ -25,7 +23,7 @@
  
 <body>
     <?php include ('includes/navbar.php') ?>
-    <br><br>
+    
     <form class="container" method="POST">
 
         <?php 
@@ -35,6 +33,13 @@
             echo '<p>'.$successMsg.'</p>';
             }
         ?>
+        <div class="mb-3">
+            <label for="categorie" class="form-label"> Catégorie </label>
+            <select class="form-select" name="categorie">
+            <option>Developpement personnel</option>
+            <option>Maladies</option>
+            <option>Vie publique</option>
+        </div>
 
         <div class="mb-3">
             <label for="pseudo" class="form-label"> Titre de la question </label>
@@ -50,7 +55,7 @@
         </div>
         <button type="submit" class="btn btn-primary" name="validate"> Publier la question </button>
 
-        <br><br>
+        
         
         
         
