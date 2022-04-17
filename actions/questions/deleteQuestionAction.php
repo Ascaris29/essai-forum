@@ -9,7 +9,7 @@ require('../database.php');
 
 
 
-
+// s'il y'a bien un id dans la barre de recherche
 if(isset($_GET['id']) AND !empty($_GET['id'])){
 
     $idOfTheQuestion = $_GET['id'];

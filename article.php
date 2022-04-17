@@ -46,7 +46,7 @@
                     <button class="btn btn-primary" type="submit" name="validate">Répondre </button>
                 </div>
             </form>
-
+            <br>
             
                
 
@@ -65,7 +65,7 @@
                     <?= $answer['date_answer'] ?> 
                     </div>
                 </div>
-
+                <br>
             <?php 
             }
             ?>    
