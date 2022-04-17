@@ -40,7 +40,7 @@
                     <label for="password" class="form-label">Mot de passe </label>
                     <input type="password" class="form-control" name="password">
                 </div>
-                <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
+                <button type="submit" class="btn btn-primary" name="validate"> Je m'inscris </button>
 
                 <br><br>
                 <p class="dir-signiup"><a href="login.php"> J'ai déjà un compte, je me connecte </a></p>

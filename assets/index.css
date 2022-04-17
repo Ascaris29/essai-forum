@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body
+{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;   
+    font-family: 'Roboto'; 
+    height:100vw; 
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+       
+}
+.card{
+    margin:10px;
+}
+.card-header{
+    background-color:#4D1977;
+}
+.titre, .pseudo{
+    margin:5px;
+}
+.titre a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.pseudo a{
+    color:#4D1977;
+}

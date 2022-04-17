@@ -13,14 +13,12 @@ require('actions/questions/showAllQuestionAction.php');
     <!--code css bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="assets/style.css">
-    
-    
+    <link rel="stylesheet" href="assets/index.css">
     <!--code javascript bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- javascript -->
     
-    <title>Forum</title>
+    <title>Le forum d'ascaris </title>
 </head>
 
 <body>
@@ -52,14 +50,14 @@ require('actions/questions/showAllQuestionAction.php');
 
           <div class="card">
              <div class="card-header">
-                <a href="article.php?id=<?php echo $question['id']; ?>"> 
-                <?= $question['title']; ?></a>
+                <p class="titre"><a href="article.php?id=<?php echo $question['id']; ?>"> 
+                <?= $question['title']; ?></a></p>
              </div>
              <div class="card-body">
              <?= $question['description']; ?>
              </div>
              <div class="card-footer">
-               Publié par <a href="profil.php?id=<?= $question['id_author']; ?>"> <?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?>
+               <p class="pseudo">Publié par <a href="profil.php?id=<?= $question['id_author']; ?>"> <?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?></p>
              </div>
           </div>
           <br>
