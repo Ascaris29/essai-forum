@@ -2,6 +2,7 @@
     session_start();
     require('actions/questions/showArticleContentAction.php');
     require('actions/questions/postAnswerAction.php');
+    require('actions/questions/showAllAnswersOfQuestionAction.php');
 ?>
 
 
@@ -39,13 +40,35 @@
 
             <form class="form-group" method="POST">
                 <div class="mb-3">
-                    <label for="anwser" class="form-label">Réponse :</label>
+                    <label for="answer" class="form-label">Réponse :</label>
                     <textarea name="answer" class="form-control"></textarea>
                     <br>
                     <button class="btn btn-primary" type="submit" name="validate">Répondre </button>
                 </div>
-              
             </form>
+
+            
+               
+
+            <?php
+                while($answer = $getAllAnswersOfThisQuestion->fetch()){  
+            ?>
+
+                <div class="card">
+                    <div class="card-header">
+                        <?= $answer['pseudo_author']?>
+                    </div>
+                    <div class="card-body">
+                        <?= $answer['content'] ?>  
+                    </div>
+                    <div class="card-footer">
+                    <?= $answer['date_answer'] ?> 
+                    </div>
+                </div>
+
+            <?php 
+            }
+            ?>    
 
         </section>
        <?php 
