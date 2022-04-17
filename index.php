@@ -37,13 +37,13 @@ require('actions/questions/showAllQuestionAction.php');
           <div class="card">
              <div class="card-header">
                 <a href="article.php?id=<?php echo $question['id']; ?>"> 
-                <?= $question['title']; ?>
+                <?= $question['title']; ?></a>
              </div>
              <div class="card-body">
              <?= $question['description']; ?>
              </div>
              <div class="card-footer">
-               Publié par <?= $question['pseudo_author']; ?> le <?= $question['date_publication']; ?>
+               Publié par <a href="profil.php?id=<?= $question['id_author']; ?>"> <?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?>
              </div>
           </div>
           <br>
