@@ -1,6 +1,7 @@
 <?php 
       require ('actions/users/securityAction.php');
       require ('actions/questions/publishQuestionAction.php');
+      require ('actions/questions/categoriesAction.php');
       
 ?>
 
@@ -33,27 +34,33 @@
             echo '<p>'.$successMsg.'</p>';
             }
         ?>
+        
         <div class="mb-3">
             <label for="categorie" class="form-label"> Catégorie </label>
             <select class="form-select" name="categorie">
-            <option>Developpement personnel</option>
-            <option>Maladies</option>
-            <option>Vie publique</option>
+            <?php 
+                while($cat = $categories->fetch()){ ?>
+                <option value =" <?= $cat['nom'] ?>"> <?= $cat['nom'] ?></option>   
+            <?php
+            }
+            ?>
+            </select>
         </div>
-
+        
+    
+    
         <div class="mb-3">
             <label for="pseudo" class="form-label"> Titre de la question </label>
             <input type="text" class="form-control" name="title">
         </div>
+        
         <div class="mb-3">
-            <label for="lastname" class="form-label"> Description de la question </label>
-            <textarea class="form-control" name="description"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="firstname" class="form-label"> Contenu de la question </label>
+            <label for="content" class="form-label"> Contenu de la question </label>
             <textarea type="text" class="form-control" name="content"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" name="validate"> Publier la question </button>
+
+
+        <button type="submit" class="btn btn-primary" name="validate" id="validate"> Publier la question </button>
 
         
         

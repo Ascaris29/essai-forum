@@ -9,14 +9,14 @@ body
     padding:0;   
     font-family: "roboto" ; 
     height:100vw; 
+    color:#4D1977;
 }
 
 .container{
-    display:flex;
-    flex-direction:column;
-    text-align:center; 
-    margin:3rem;     
+   
+    padding:100px 0;     
 }
-.mb-3{
-    
+.form-label{
+    color:#4D1977;
+    font-weight:bold;
 }

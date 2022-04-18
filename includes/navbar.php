@@ -11,6 +11,9 @@
           <a class="nav-link active" aria-current="page" href="my-questions.php">Mes questions </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="categories.php"> Catégories </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="publish-question.php"> Créer une discution </a>
         </li>
        
@@ -29,10 +32,7 @@
         }
         ?>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"> Chercher </button>
-      </form>
+      
     </div>
   </div>
 </nav>

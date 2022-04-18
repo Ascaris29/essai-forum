@@ -32,10 +32,10 @@ require('actions/questions/showAllQuestionAction.php');
 
 
             <div class="col-8">
-               <input type="search" name="search" class="form-control"> 
+               <input type="search" name="search" class="form-control" id="index-search"> 
             </div>
             <div class="col-4">
-               <button class="btn btn-success" type="submit"> Rechercher </button>
+               <button class="btn btn-success" type="submit" id="btn-search-index"> Rechercher </button>
             </div>
 
          </div>

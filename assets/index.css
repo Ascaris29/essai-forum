@@ -17,17 +17,23 @@ body
     text-align:center;      
 }
 
-.form-search button{
+.form-search button{ 
     border:none;
     background-color:#4D1977;
     margin:15px 0;
+    
 }
 .form-search button:hover{
     background-color:#8E05FD;
 }
-input[type=search]{
-    width:50vw;
-    margin:15px;
+#index-search{
+    width:30vw;
+    margin:15px;   
+}
+#btn-search-index{
+   
+   margin-left:25px; 
+
 }
 .card{
     margin:10px;
