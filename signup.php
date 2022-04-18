@@ -43,7 +43,7 @@
                 <button type="submit" class="btn btn-primary" name="validate"> Je m'inscris </button>
 
                 <br><br>
-                <p class="dir-signiup"><a href="login.php"> J'ai déjà un compte, je me connecte </a></p>
+                <p class="dir-signup"><a href="login.php"> J'ai déjà un compte, je me connecte </a></p>
                 
                 
         </form>

@@ -16,12 +16,12 @@ require('actions/users/loginAction.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
-    <title>Forum</title>
+    <title>Le forum d'ascaris </title>
 </head>
 
 <body>
 
-    <h1> La nouvelle </h1>
+    <h1> Le forum d'ascaris </h1>
 
         <form class="container" method="POST">
 
@@ -40,7 +40,7 @@ require('actions/users/loginAction.php'); ?>
             <button type="submit" class="btn btn-primary" name="validate">Je me connecte </button>
             
             
-            <p class="dir-signiup"><a href="signup.php">Je n'ai pas de compte, je m'inscris</a></p>
+            <p class="dir-signup"><a href="signup.php">Je n'ai pas de compte, je m'inscris</a></p>
             
     </form>
 </body>
