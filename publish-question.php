@@ -25,16 +25,15 @@
 <body>
     <?php include ('includes/navbar.php') ?>
     
+    <div class="card">
     <form class="container" method="POST">
-
         <?php 
         if(isset($errorMsg)){ 
             echo '<p>'.$errorMsg.'</p>'; 
             }elseif(isset($successMsg)){
             echo '<p>'.$successMsg.'</p>';
             }
-        ?>
-        
+        ?>        
         <div class="mb-3">
             <label for="categorie" class="form-label"> Catégorie </label>
             <select class="form-select" name="categorie">
@@ -45,10 +44,7 @@
             }
             ?>
             </select>
-        </div>
-        
-    <essai git >
-    
+        </div> 
         <div class="mb-3">
             <label for="pseudo" class="form-label"> Titre de la question </label>
             <input type="text" class="form-control" name="title">
@@ -67,6 +63,6 @@
         
         
    </form>    
-
+</div>
 </body>
 </html>
