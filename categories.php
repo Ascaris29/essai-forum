@@ -22,7 +22,42 @@ require('actions/questions/categoriesAction.php');
 <body>
    <?php require ('includes/navbar.php'); ?> 
 
-
+   <table class="table">
+       <h2> Catégories </h2>
+  <thead>
+    <tr>
+      <th scope="col">Catégories</th>
+      <th scope="col"> Sujets </th>
+      <th scope="col"> Messages </th>
+      <th scope="col"> Derniers messages </th>
+    </tr>
+  </thead>
+  <tbody>
+      <?php
+      while($cat = $categories->fetch()){
+    ?>
+    <tr>
+      <th scope="row"> <?= $cat['nom']?>    </th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <?php
+    }
+    ?>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 
 
 

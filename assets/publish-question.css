@@ -14,9 +14,20 @@ body
 
 .container{
    
-    padding:100px 0;     
+    padding:100px 0; 
+    display:flex;
+    flex-direction:column; 
+    text-align:center   
 }
 .form-label{
     color:#4D1977;
     font-weight:bold;
+    text-align:left;
+    font-size:1.2rem;
+}
+#validate{
+    text-align:center;
+    background-color:#4D1977;
+    border:none;
+    
 }
