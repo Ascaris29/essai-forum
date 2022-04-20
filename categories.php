@@ -23,28 +23,34 @@ require('actions/questions/categoriesAction.php');
    <?php require ('includes/navbar.php'); ?> 
 
    
+   
 
    <table class="table">
+       
+       
          <tr class="entete">
-            <th scope="col"> Catégories </th>
+        <?php
+          while($cat = $categories->fetch()){
+                     
+         ?>
+            <th scope="col"> <h5><?= $cat['nom']?> </h5> </th>
             <th scope="col"> Sujets </th>
             <th scope="col"> Messages </th>
             <th scope="col"> Derniers messages </th>
-        </tr>
-        <tbody>
-            <?php
-                while($cat = $categories->fetch()){
-                ?>
+        
+        </tr>  
         <tr>
-            <th scope="row"> <h5><?= $cat['nom']?> </h5></th>
+        
+            <td scope="row"> <h6><?= $cat['nom'] ?></h6></th>
             <td> 15989</td>
             <td> 98787665</td>
             <td> 05/05/2022 à 15h50 <br> de Max@</td>
         </tr>
-        <?php
-        }
-        ?>  
-    </tbody>
+    <?php
+    }
+    ?>
+    
+    
     </table>
  
 

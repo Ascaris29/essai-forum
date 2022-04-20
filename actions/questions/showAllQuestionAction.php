@@ -15,10 +15,6 @@ if(isset($_GET['search']) AND !empty($_GET['search'])){
     // cherche dans la bdd un résultat qui ressemble à ce que l'utilisateur cherche en fonction du titre
     $getAllQuestions = $bdd->query(' SELECT id, id_author, title, description, content, pseudo_author, date_publication FROM questions WHERE title LIKE "%' .$usersSearch. '%" ORDER BY id DESC');  
 
-
-
-
-
 }
 
 
